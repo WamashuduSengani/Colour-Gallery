@@ -1,0 +1,127 @@
+/* Designing the view of the gallery */
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+:root {
+    --basic_background: #adadadad;
+    --basic_white: white;
+    --basic_border_radius: 25px;
+}
+
+body {
+    font-family: 'Courier New', Courier, monospace;
+    background-color: var(--basic_background);
+}
+
+/* Heading styles */
+
+#color_gallery_heading {
+    text-align: center;
+    transform: translateY(5rem);
+    font-size: 2.75rem;
+}
+
+/* Color gallery styling */
+
+#color_gallery_container {
+    width: 45%;
+    min-height: 125px;
+    margin: auto;
+    position: relative;
+    top: 10rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.color_wrapper {
+    display: flex;
+    margin: 1%;
+    width: 8rem;
+    height: 2.5rem;
+    border-radius: var(--basic_border_radius);
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #E0e0e0;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.color_wrapper:hover {
+    color: black;
+    letter-spacing: 2px;
+}
+
+#color_red:hover {
+    border: 2px solid red;
+    background-color: red;
+}
+
+#color_orange:hover {
+    border: 2px solid orange;
+    background-color: orange;
+}
+
+#color_yellow:hover {
+    border: 2px solid yellow;
+    background-color: yellow;
+}
+
+#color_green:hover {
+    border: 2px solid green;
+    background-color: green;
+}
+
+#color_blue:hover {
+    border: 2px solid blue;
+    background-color: blue;
+}
+
+#color_indigo:hover {
+    border: 2px solid indigo;
+    background-color: indigo;
+}
+
+#color_violet:hover {
+    border: 2px solid violet;
+    background-color: violet;
+}
+
+/* Add and Help container styling */
+
+
+#add_and_help_container {
+    width: 3rem;
+    height: 7.5rem;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+}
+
+.add_help_class {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    background-color: var(--basic_white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #989898;
+    font-weight: bold;
+    font-size: 2rem;
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+.add_help_class:hover {
+    background-color: #989898;
+    color: black;
+}
