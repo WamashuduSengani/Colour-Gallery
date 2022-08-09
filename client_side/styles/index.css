@@ -48,47 +48,13 @@ body {
     align-items: center;
     border: 2px solid #E0e0e0;
     cursor: pointer;
+    font-weight: bold;
     transition: all 0.3s ease-in;
 }
 
 .color_wrapper:hover {
     color: black;
-    letter-spacing: 2px;
-}
-
-#color_red:hover {
-    border: 2px solid red;
-    background-color: red;
-}
-
-#color_orange:hover {
-    border: 2px solid orange;
-    background-color: orange;
-}
-
-#color_yellow:hover {
-    border: 2px solid yellow;
-    background-color: yellow;
-}
-
-#color_green:hover {
-    border: 2px solid green;
-    background-color: green;
-}
-
-#color_blue:hover {
-    border: 2px solid blue;
-    background-color: blue;
-}
-
-#color_indigo:hover {
-    border: 2px solid indigo;
-    background-color: indigo;
-}
-
-#color_violet:hover {
-    border: 2px solid violet;
-    background-color: violet;
+    letter-spacing: 1.5px;
 }
 
 /* Add and Help container styling */
@@ -127,12 +93,13 @@ body {
     color: black;
 }
 
-
 /* Help Box */
 
 #help_info_container {
+    font-family: 'Alegreya';
+    font-size: 1rem;
     background-color: var(--basic_white);
-    width: 20rem;
+    width: 19rem;
     min-height: 200px;
     position: absolute;
     top: 1rem;
@@ -158,6 +125,26 @@ body {
 }
 
 #exit_help {
-    transform: translate(8rem,-1rem);  
+    transform: translate(8rem,0rem);  
     cursor: pointer;  
+}
+
+/* Remove color */
+
+.remove_color {
+    position: absolute;
+    padding: 5px;
+    border-radius: 50%;
+    width: 0.75rem;
+    height: 0.75rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translate(2.75rem, 0);
+    letter-spacing: 0px;  
+}
+
+.remove_color:hover {
+    font-weight: bolder;
+    font-size: 1.25rem;
 }
