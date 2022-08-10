@@ -49,6 +49,7 @@ body {
     border: 2px solid #E0e0e0;
     cursor: pointer;
     font-weight: bold;
+    z-index: 1;
     transition: all 0.3s ease-in;
 }
 
@@ -63,7 +64,7 @@ body {
 #add_and_help_container {
     width: 3rem;
     height: 7.5rem;
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -101,7 +102,7 @@ body {
     background-color: var(--basic_white);
     width: 19rem;
     min-height: 200px;
-    position: absolute;
+    position: fixed;
     top: 1rem;
     right: -20rem;
     display: flex;
@@ -109,6 +110,7 @@ body {
     justify-content: center;
     align-items: center;
     border-radius: var(--basic_border_radius);
+    z-index: 1;
     transition: all 0.3s ease-in;
 }
 
@@ -125,7 +127,8 @@ body {
 }
 
 #exit_help {
-    transform: translate(8rem,0rem);  
+    transform: translate(8rem,0rem); 
+    font-size: 1.2rem; 
     cursor: pointer;  
 }
 
@@ -147,4 +150,94 @@ body {
 .remove_color:hover {
     font-weight: bolder;
     font-size: 1.25rem;
+}
+
+/* Color Input form */
+
+form {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-color: white;
+    width: 15rem;
+    height: 10rem;
+    border-radius: var(--basic_border_radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.15s ease-out;
+}
+
+form h3 {
+    text-align: center;
+    position: relative;
+    top: 0.80rem;
+}
+
+form #input_wrapper {
+    width: 80%;
+    position: relative;
+    top: 2rem;
+}
+
+#input_wrapper input {
+    width: 92.5%;
+    height: 1.75rem;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid var(--basic_background);
+    padding-left: 7.5px;
+    transition: all 0.2s ease-in;
+}
+
+#input_wrapper label {
+    font-size: 0.85rem;
+    position: relative;
+    left: 2rem;
+    bottom: 1.6rem;
+    color: #adadad;
+    padding-left: 5px;
+    padding-right: 5px;
+    transition: all 0.2s ease-in;
+}
+
+#input_wrapper input:focus {
+    border: 2px solid #a7a5a5;
+}
+
+#input_wrapper input:focus ~ label, 
+#input_wrapper input:valid ~ label  {
+    background-color: white;
+    font-size: 0.7rem;
+    color: black;
+    left: 2.5rem;
+    bottom: 2.6rem;
+}
+
+input[type=submit] {
+    transform: translateY(3.5em);
+    width: 6rem;
+    height: 1.5rem;
+    border-radius: var(--basic_border_radius);
+    border: none;
+    outline: none;
+    background-color: #adadad;
+    color: white;
+    font-weight: bold;
+    font-size: 0.75rem; 
+    cursor: pointer;
+    transition: all 0.2s ease-in;
+}
+
+input[type=submit]:hover {
+    background-color: #949494;
+}
+
+
+#exit_input_form {
+    position: absolute;
+    transform: translate(5.5rem, 0.5rem);
+    cursor: pointer;
 }

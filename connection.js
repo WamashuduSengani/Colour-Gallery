@@ -40,3 +40,27 @@ app.get("/default_colors", (request, response) => {
 
     response.json(default_colors_list)
 })
+
+app.post("/add_color", (request, response) => {
+
+    const data = request.body
+    const name = data.color_name
+    const type = data.color_type
+    const bool = data.support_bool
+    console.log(data)
+    
+    const query = `INSERT INTO colors_info (color_id, color_name, color_type) VALUES (?,?,?)`
+
+    if (bool == true) {
+
+        database.run(query, [8, "pink", "non-default"], error => {
+            if (error) return console.error(error.message)
+        })
+
+        console.log("Successfully inserted")
+    }
+
+    database.close()
+
+
+})

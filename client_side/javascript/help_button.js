@@ -10,12 +10,10 @@ help_button.addEventListener("click", () => {
 
     console.log("clicked display flex")
     help_container.style.right = "1rem";
-
 })
 
 exit_help.addEventListener("click", () => {
 
     console.log("clicked display none")
     help_container.style.right = "-25rem";
-
 })

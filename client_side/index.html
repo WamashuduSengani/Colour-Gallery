@@ -16,13 +16,11 @@
 
     <div id="color_gallery_container">
 
-
     </div>
-
 
     <div id="help_info_container">
 
-        <div id="exit_help"><b>x</b></div>
+        <div id="exit_help"><b>&times;</b></div>
 
         <h4 id="help_heading">Color Formats Accepted</h4>
 
@@ -38,6 +36,22 @@
 
     </div>
 
+    <form id="input_form">
+
+        <div id="exit_input_form"><b>&times;</b></div>
+
+        <h3>Input a Color</h3>
+
+        <div id="input_wrapper">
+            <input type="text" name="" id="color_input" autocomplete="off" required>
+            <label for="">color name or code</label>
+        </div>
+
+        <input id="add_color_button" type="submit" value="Add Color">
+        
+    </form>
+
+
     <div id="add_and_help_container">
 
         <div class="add_help_class" id="add_color">+</div>
@@ -46,8 +60,9 @@
 
     </div>
 
+    <div id="overlay"></div>
 
-    <script src="javascript/color_manipulation.js"></script>
+    <script src="javascript/color_generator.js"></script>
     <script src="javascript/help_button.js"></script>
     
 </body>
