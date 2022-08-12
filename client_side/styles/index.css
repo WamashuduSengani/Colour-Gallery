@@ -9,6 +9,8 @@
     --basic_background: #adadadad;
     --basic_white: white;
     --basic_border_radius: 25px;
+    --border_color: #E0E0E0;
+    --text_color: #989898;
 }
 
 body {
@@ -46,16 +48,22 @@ body {
     border-radius: var(--basic_border_radius);
     justify-content: center;
     align-items: center;
-    border: 2px solid #E0e0e0;
+    border: 2px solid var(--border_color);
     cursor: pointer;
-    font-weight: bold;
-    z-index: 1;
     transition: all 0.3s ease-in;
 }
 
 .color_wrapper:hover {
     color: black;
     letter-spacing: 1.5px;
+}
+
+.color_html_text {
+    font-weight: bold;
+    font-size: 1rem;
+    text-align: center;
+    width: 50%;
+    overflow-x: hidden;
 }
 
 /* Add and Help container styling */
@@ -82,7 +90,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #989898;
+    color: var(--text_color);
     font-weight: bold;
     font-size: 2rem;
     cursor: pointer;
@@ -90,7 +98,7 @@ body {
 }
 
 .add_help_class:hover {
-    background-color: #989898;
+    background-color: var(--text_color);
     color: black;
 }
 
@@ -117,13 +125,14 @@ body {
 #help_info_container h4 {
     text-align: center;
     position: relative;
-    bottom: 1rem;
+    bottom: 1.25rem;
 }
 
 #help_info_container ul {
     font-size: 0.8rem;
     position: relative;
     left: 0.5rem;
+    bottom: 0.5rem;
 }
 
 #exit_help {
@@ -160,13 +169,13 @@ form {
     width: 15rem;
     height: 10rem;
     border-radius: var(--basic_border_radius);
-    display: flex;
+    display: none;
     flex-direction: column;
     align-items: center;
     margin: auto;
     position: relative;
     z-index: 1;
-    opacity: 0;
+    box-shadow: 0 0 10px 0 rgb(0, 0, 0.15);
     transition: all 0.15s ease-out;
 }
 
@@ -209,7 +218,7 @@ form #input_wrapper {
 
 #input_wrapper input:focus ~ label, 
 #input_wrapper input:valid ~ label  {
-    background-color: white;
+    background-color: var(--basic_white);
     font-size: 0.7rem;
     color: black;
     left: 2.5rem;
@@ -224,7 +233,7 @@ input[type=submit] {
     border: none;
     outline: none;
     background-color: #adadad;
-    color: white;
+    color: var(--basic_white);
     font-weight: bold;
     font-size: 0.75rem; 
     cursor: pointer;
@@ -240,4 +249,28 @@ input[type=submit]:hover {
     position: absolute;
     transform: translate(5.5rem, 0.5rem);
     cursor: pointer;
+}
+
+/* Reset Page Button */
+
+#reload_page {
+    position: absolute;
+    bottom: 2rem;
+    left: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--basic_white);
+    border-radius: var(--basic_border_radius);
+    width: 5rem;
+    height: 2rem;
+    font-weight: bold;
+    color: var(--text_color);
+    cursor: pointer;
+    transition: all 0.3s ease-in;
+}
+
+#reload_page:hover {
+    background-color: var(--text_color);
+    color: black;
 }

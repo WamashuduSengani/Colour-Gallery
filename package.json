@@ -2,7 +2,7 @@
   "name": "color-gallery",
   "version": "1.0.0",
   "description": "A color gallery that implements the web api",
-  "main": "connection.js",
+  "main": "*.js",
   "dependencies": {
     "express": "^4.18.1",
     "sqlite3": "^5.0.11"
