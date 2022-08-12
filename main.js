@@ -57,7 +57,6 @@ app.post('/remove_color', (request, response) => {
     const data = request.body
     const { color_name } =  data
     const { color_type } = data
-
     console.log(data)
 
     const insertQuery = `DELETE FROM color_details WHERE color_name = ? AND color_type = ?`
