@@ -29,7 +29,7 @@ app.get('/all_colors', (request, response) => {
             i--
         }
 
-        response.json(reshuffled_list)
+       
     }, 10)
 })
 
