@@ -10,6 +10,7 @@ A program that allows users to add whatever choice of color they want to add, th
 * Node JS
 * Express (HTTP requests and responses)
 * Database (Sqlite3)
+* Makefile
 
 ### Program Functionality
 * On click of any color, the background changes to the color click.
